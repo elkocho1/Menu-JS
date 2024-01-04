@@ -75,7 +75,6 @@ const menu = [{
 const sectionCenter = document.querySelector(".section-center");
 const container = document.querySelector(".btn-container");
 
-
 window.addEventListener("DOMContentLoaded", function () {
   displayMenuItems(menu);
 
@@ -116,16 +115,10 @@ window.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-
-
-
-
-
 function displayMenuItems(menuItems) {
 
   let displayMenu = menuItems.map(function (item) {
     //console.log(item);
-
     return `<article class="menu-item">
     <img src=${item.img} alt="${item.title}" class="photo" />
     <div class="item-info">
