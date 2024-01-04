@@ -88,7 +88,12 @@ window.addEventListener("DOMContentLoaded", function () {
     },
     ["all"]
   );
-  console.log(categories);
+  const categoryBtns = categories.map(function (category) {
+    return `<button type="button" class="filter-btn" 
+    data-id="${category}">
+    ${category}
+  </button>`
+  })
 });
 
 //filter items
