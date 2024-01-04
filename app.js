@@ -90,10 +90,11 @@ window.addEventListener("DOMContentLoaded", function () {
   );
   const categoryBtns = categories.map(function (category) {
     return `<button type="button" class="filter-btn" 
-    data-id="${category}">
+    data-id=${category}>
     ${category}
   </button>`
-  })
+  }).join("");
+  console.log(categoryBtns);
 });
 
 //filter items
