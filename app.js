@@ -77,7 +77,18 @@ const sectionCenter = document.querySelector(".section-center");
 const filterBtns = document.querySelectorAll(".filter-btn");
 
 window.addEventListener("DOMContentLoaded", function () {
-  displayMenuItems(menu)
+  displayMenuItems(menu);
+
+  const categories = menu.reduce(
+    function (values, item) {
+      if (!values.includes(item.category)) {
+        values.push(item.category);
+      }
+      return values;
+    },
+    ["all"]
+  );
+  console.log(categories);
 });
 
 //filter items
